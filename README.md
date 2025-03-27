@@ -53,3 +53,4 @@ plt.tight_layout()  # Prevents label cutoff
 plt.show()
 ```
 
+![Dendrograma](docs/assets/images/cluster_comunas_RM.png)
