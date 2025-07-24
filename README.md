@@ -1,6 +1,6 @@
-# Hierarchical cluster analysis
+# Analisis de Conglomerados Jerarquico
 
-### Set working directory and load data
+### Establecer el directorio de trabajo y cargar los datos
 ```
 import os
 
@@ -12,23 +12,23 @@ df = pd.read_csv('comunas.csv')
 
 df.info()
 ```
-### Import libraries
+### Importar bibliotecas
 ```
 from scipy.cluster.hierarchy import linkage, dendrogram
 
 import matplotlib.pyplot as plt
 ```
-### Define X data (exclude 'comuna')
+### Definir los datos X (excluir 'comuna')
 ```
 X = df.drop('comuna', axis=1)
 ```
-### Perform hierarchical clustering
+### Realizar la agrupación jerárquica
 ```
-Z = linkage(X, method='ward')  # Try 'average', 'complete', 'single' if needed
+Z = linkage(X, method='ward')  # Probar con 'average', 'complete', 'single' si es necesario
 ```
-### Plot horizontal dendrogram
+### Graficar un dendrograma horizontal
 ```
-plt.figure(figsize=(8, 5))  # Adjust size as needed
+plt.figure(figsize=(8, 5))  # Ajustar el tamaño si es necesario
 
 dendrogram(
 
@@ -36,9 +36,9 @@ dendrogram(
     
     labels=df['comuna'].values,
     
-    orientation='left',  # Makes dendrogram horizontal
+    orientation='left',  # Situar el dendrograma en posición horizontal
     
-    leaf_font_size=6,    # Adjust font size
+    leaf_font_size=6,    # Ajustar el tamaño de la fuente
 
 )
 
@@ -48,7 +48,7 @@ plt.xlabel('Distance')
 
 plt.ylabel('Comuna')
 
-plt.tight_layout()  # Prevents label cutoff
+plt.tight_layout()  # Previene la pérdida de la etiqueta
 
 plt.show()
 ```
