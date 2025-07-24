@@ -1,4 +1,4 @@
-# Analisis de Conglomerados Jerarquico
+# Analisis de Conglomerados Jerárquico
 
 ### Establecer el directorio de trabajo y cargar los datos
 ```
