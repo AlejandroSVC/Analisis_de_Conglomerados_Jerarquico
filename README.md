@@ -1,5 +1,7 @@
 # Analisis de Conglomerados Jerárquico
 
+![banner_clusters](docs/assets/images/banner_clusters.jpg)
+
 ### Establecer el directorio de trabajo y cargar los datos
 ```
 import os
